@@ -244,6 +244,8 @@
 
     <main class="main">
 
+        @dump(\App\Helpers\Cart\Cart::getCart())
+
         {{ $slot }}
 
     </main>
