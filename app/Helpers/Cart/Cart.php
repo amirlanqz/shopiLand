@@ -43,5 +43,16 @@ class Cart
         return session('cart') ?: [];
     }
 
+    public static function getCartQuantityItems(): int
+    {
+        return count(self::getCart());
+    }
+
+    public static function getCartQuantityTotal(): int
+    {
+        $cart = self::getCart();
+        return array_sum(array_column($cart, 'quantity'));
+    }
+
 
 }
