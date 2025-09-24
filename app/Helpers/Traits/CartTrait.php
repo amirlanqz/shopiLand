@@ -23,4 +23,14 @@ trait CartTrait
         }
     }
 
+    public function removeFromCart(int $productId):void
+    {
+        if (Cart::removeFromCart($productId)) {
+            $this->js("toastr.success('Product remove from cart successfully!')");
+            $this->dispatch('cart-updated');
+        } else {
+            $this->js("toastr.error('Oops! Something went wrong!')");
+        }
+    }
+
 }

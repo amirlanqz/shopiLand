@@ -54,5 +54,23 @@ class Cart
         return array_sum(array_column($cart, 'quantity'));
     }
 
+    public static function getCartTotalSum(): int {
+        $total = 0;
+
+        foreach (self::getCart() as $product) {
+            $total += $product['price'] * $product['quantity'];
+        }
+        return $total;
+    }
+
+    public static function removeFromCart(int $productId): bool
+    {
+        if (self::hasProductInCart($productId)) {
+            session()->forget("cart.{$productId}");
+            return true;
+        }
+
+        return false;
+    }
 
 }
