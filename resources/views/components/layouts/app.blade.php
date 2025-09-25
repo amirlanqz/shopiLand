@@ -144,35 +144,37 @@
                                     Catalog
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
-                                    <li>
-                                        <a class="dropdown-item" href="category.html">Shoes</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="category.html">Jeans</a>
-                                    </li>
-                                    <li class="nav-item dropend">
-                                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                                           data-bs-auto-close="outside">Sportswear</a>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                            <li>
-                                                <a class="dropdown-item" href="category.html">Men's Sportswear</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="category.html">Women's Sportswear</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="category.html">Baby's Sportswear</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="category.html">Coat</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="category.html">Shirts</a>
-                                    </li>
-                                </ul>
-                            </li>
+                                    {!! \App\Helpers\Category\Category::getMenu('incs.menu-tpl', 'categoriesHtml') !!}
+
+                                    {{--                                    <li>--}}
+{{--                                        <a class="dropdown-item" href="category.html">Shoes</a>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <a class="dropdown-item" href="category.html">Jeans</a>--}}
+{{--                                    </li>--}}
+{{--                                    <li class="nav-item dropend">--}}
+{{--                                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"--}}
+{{--                                           data-bs-auto-close="outside">Sportswear</a>--}}
+{{--                                        <ul class="dropdown-menu dropdown-menu-end">--}}
+{{--                                            <li>--}}
+{{--                                                <a class="dropdown-item" href="category.html">Men's Sportswear</a>--}}
+{{--                                            </li>--}}
+{{--                                            <li>--}}
+{{--                                                <a class="dropdown-item" href="category.html">Women's Sportswear</a>--}}
+{{--                                            </li>--}}
+{{--                                            <li>--}}
+{{--                                                <a class="dropdown-item" href="category.html">Baby's Sportswear</a>--}}
+{{--                                            </li>--}}
+{{--                                        </ul>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <a class="dropdown-item" href="category.html">Coat</a>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <a class="dropdown-item" href="category.html">Shirts</a>--}}
+{{--                                    </li>--}}
+{{--                                </ul>--}}
+{{--                            </li>--}}
                         </ul>
                     </div>
                 </div>
@@ -188,6 +190,7 @@
         <livewire:cart.cart-modal-component/>
 
     <main class="main">
+
 
         {{ $slot }}
 
